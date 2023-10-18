@@ -1,6 +1,6 @@
 # Calculadora
 
-Projeto de desenvolvimento de calculador mobile
+Projeto de desenvolvimento de uma calculadora mobile
 
 ## Getting Started
 
