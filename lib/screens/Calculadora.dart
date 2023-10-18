@@ -1,5 +1,5 @@
-import 'package:calculadora/components/botao.dart';
-import 'package:calculadora/models/logicaCalculadora.dart';
+import 'package:calculadora/components/Botao.dart';
+import 'package:calculadora/models/LogicaCalculadora.dart';
 import 'package:flutter/material.dart';
 
 class Calculadora extends StatelessWidget {

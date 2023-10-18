@@ -1,6 +1,6 @@
 # Calculadora
 
-Projeto de desenvolvimento de uma calculadora mobile
+Projeto de desenvolvimento de uma calculadora mobile aplicando os conceitos do SOLID e o Padrão de Projeto Strategy.
 
 ## Getting Started
 
