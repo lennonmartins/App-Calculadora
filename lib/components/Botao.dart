@@ -29,7 +29,7 @@ class CalcButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           shape: CircleBorder(),
           backgroundColor: buttonColor,
-          padding: EdgeInsets.all(15),
+          padding: EdgeInsets.all(20),
         ),
       ),
     );

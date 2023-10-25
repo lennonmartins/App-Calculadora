@@ -68,13 +68,12 @@ class _CalculatoraUIState extends State<CalculadoraUI> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 CalcButton(
-                  text: 'AC',
-                  buttonColor: Colors.grey,
-                  textColor: Colors.black,
-                  onPressed: () {
-                    calculation('AC');
-                  },
-                ),
+                    text: 'C',
+                    buttonColor: Colors.grey,
+                    textColor: Colors.black,
+                    onPressed: () {
+                      calculation('C');
+                    }),
                 CalcButton(
                   text: '+/-',
                   buttonColor: Colors.grey,
@@ -142,7 +141,7 @@ class _CalculatoraUIState extends State<CalculadoraUI> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Row(
@@ -233,12 +232,12 @@ class _CalculatoraUIState extends State<CalculadoraUI> {
                     calculation('0');
                   },
                   style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.fromLTRB(25, 10, 115, 10),
+                      padding: EdgeInsets.fromLTRB(60, 15, 60, 15),
                       shape: StadiumBorder(),
                       backgroundColor: Colors.grey[850]),
                   child: Text(
                     '0',
-                    style: TextStyle(fontSize: 35, color: Colors.white),
+                    style: TextStyle(fontSize: 30, color: Colors.white),
                   ),
                 ),
                 CalcButton(

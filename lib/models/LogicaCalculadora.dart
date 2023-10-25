@@ -27,6 +27,8 @@ class LogicaCalculadora {
   }
 
   String div() {
+    if (numTwo == 0) return "Não é possível dividir por zero";
+
     result = (numOne / numTwo).toString();
     numOne = double.parse(result);
     return doesContainDecimal(result);
@@ -35,14 +37,15 @@ class LogicaCalculadora {
   String doesContainDecimal(dynamic result) {
     if (result.toString().contains('.')) {
       List<String> splitDecimal = result.toString().split('.');
-      if (!(int.parse(splitDecimal[1]) > 0))
+      if (!(int.parse(splitDecimal[1]) > 0)) {
         return result = splitDecimal[0].toString();
+      }
     }
     return result;
   }
 
   String calcular(btnTexto) {
-    if (btnTexto == 'AC') {
+    if (btnTexto == 'C') {
       texto = '0';
       numOne = 0;
       numTwo = 0;
@@ -70,7 +73,7 @@ class LogicaCalculadora {
       } else {
         numTwo = double.parse(result);
       }
-      //esta  guardando a operaçao anterior
+
       if (opr == '+') {
         finalResult = add();
       } else if (opr == '-') {
@@ -80,6 +83,7 @@ class LogicaCalculadora {
       } else if (opr == '/') {
         finalResult = div();
       }
+
       preOpr = opr;
       opr = btnTexto;
       result = '';
@@ -88,7 +92,7 @@ class LogicaCalculadora {
       finalResult = doesContainDecimal(result);
     } else if (btnTexto == '.') {
       if (!result.toString().contains('.')) {
-        result = result.toString() + '.';
+        result = '$result.';
       }
       finalResult = result;
     } else if (btnTexto == '+/-') {
