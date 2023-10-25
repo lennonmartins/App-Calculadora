@@ -6,30 +6,29 @@ class CalcButton extends StatelessWidget {
   final Color textColor;
   final Function onPressed;
 
-  CalcButton(
-      {required this.text,
+  const CalcButton(
+      {super.key,
+      required this.text,
       required this.buttonColor,
       required this.textColor,
       required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: ElevatedButton(
-        onPressed: () {
-          onPressed();
-        },
-        child: Text(
-          text,
-          style: TextStyle(
-            fontSize: 30,
-            color: textColor,
-          ),
-        ),
-        style: ElevatedButton.styleFrom(
-          shape: CircleBorder(),
-          backgroundColor: buttonColor,
-          padding: EdgeInsets.all(20),
+    return ElevatedButton(
+      onPressed: () {
+        onPressed();
+      },
+      style: ElevatedButton.styleFrom(
+        shape: const CircleBorder(),
+        backgroundColor: buttonColor,
+        padding: const EdgeInsets.all(20),
+      ),
+      child: Text(
+        text,
+        style: TextStyle(
+          fontSize: 30,
+          color: textColor,
         ),
       ),
     );
